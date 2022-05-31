@@ -1,0 +1,126 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 120px;
+  border: 1px solid transparent;
+  color: $font-color-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  text-align: center;
+  transition: background-color 0.1s ease-in;
+  @include button-size($btn-min-height, $btn-padding-y, $btn-padding-x, $btn-font-size);
+
+
+  &.disabled,
+  [disabled],
+  &:disabled,
+  &:active:disabled {
+    background-color: $btn-disabled-bg !important;
+    border-color: $btn-disabled-border-color !important;
+    color: $btn-disabled-color !important;
+    cursor: auto;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    border: 1px dashed $black;
+  }
+
+  &+.btn {
+    margin-left: 5px;
+  }
+}
+
+//Button theme
+@each $color,
+$value in $btn-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+
+    @if ($color=='quaternary') {
+      color: $btn-quaternary-color;
+    }
+  }
+
+  .btn-line-#{$color} {
+    @include button-outline-variant($value, $value);
+
+    @if ($color=='tertiary') {
+      color: $btn-tertiary-color;
+    }
+  }
+
+  .btn-icon-#{$color} {
+    @include button-icon($value);
+  }
+}
+
+
+.btn-sm {
+  min-width: 60px;
+}
+
+.btn-lg {
+  padding-left: 18px;
+  padding-right: 18px;
+  min-height: 40px;
+  font-size: $font-size-lg
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-delete {
+  background-color: $quaternary;
+  color: $white;
+  @include circle(20px);
+  line-height: 20px;
+  font-size: 0;
+  transition: background-color 0.1s ease-in;
+
+  &::before {
+    font-family: $icon-font-family;
+    content: $icon-x-bold;
+    font-size: 10px;
+  }
+
+  &:hover {
+    background-color: darken($quaternary, 10%);
+  }
+}
+
+.btn-fold {
+  &::before {
+    content: $icon-plus;
+    font-family: $icon-font-family;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  &::after {
+    content: '펼치기';
+    margin-left: 5px;
+  }
+
+  &.active {
+
+    &::before {
+      content: $icon-minus;
+    }
+
+    &::after {
+      content: '접기';
+    }
+  }
+}
+
+.btn-icon {
+  min-width: $font-size-base;
+  min-height: $font-size-base;
+  padding: 0;
+  border: 0;
+}

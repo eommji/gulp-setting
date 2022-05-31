@@ -1,0 +1,16 @@
+.box {
+    border: 1px solid $box-border-color;
+
+    &.scroll-box {
+        .scroll-box-inner {
+            overflow-y: auto;
+            height: 400px;
+        }
+        
+        .scroll-box-top {
+            padding: $box-title-padding-y $box-title-padding-x;
+            border-bottom: 1px solid $box-border-color;
+        }
+    }
+
+}

@@ -1,0 +1,412 @@
+// Colors
+$white: #fff !default;
+$gray-100: #f1f1f1 !default; // sidebar bg
+$gray-200: #eeeeee !default; // line
+$gray-300: #dddddd !default; // border
+$gray-400: #aaaaaa !default; // hover border
+$gray-500: #999999 !default; // placeholder, caption
+$gray-600: #666666 !default; // font
+$gray-700: #222222 !default; // font dark
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(("100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700),
+  $grays);
+
+$blue: #0241BF !default;
+$blue-ckd: #004A98 !default;
+$skyblue: #82A9FF !default;
+$skyblue-light: #D9E5FF !default;
+$red: #FF8282 !default;
+$green: #017236 !default;
+$gray: $gray-600 !default;
+
+$colors: () !default;
+$colors: map-merge(("blue": $blue,
+    "gray": $gray-600,
+    "red": $red,
+    "green": $green,
+    "white": $white,
+  ),
+  $colors);
+
+$primary: $blue !default;
+$secondary: $gray !default;
+$dark: $gray-700 !default;
+$tertiary: $gray-200 !default;
+$quaternary: $gray-500 !default;
+
+$bluedark: $red !default;
+$success: $red !default;
+$info: $red !default;
+$danger: $red !default;
+$light: $red !default;
+$graydark: $red !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $gray-300,
+    "quaternary": $gray-200,
+    "green": $green,
+    "blue-ckd": $blue-ckd,
+    "gray": $gray,
+    "red": $red
+  ),
+  $theme-colors);
+
+$btn-colors: () !default;
+$btn-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $gray-300,
+    "quaternary": $gray-200,
+    "green": $green,
+    "blue-ckd": $blue-ckd,
+    "gray": $gray,
+  ),
+  $btn-colors);
+
+// Font
+$font-size-base: 14px !default;
+$font-size-xl: 20px !default;
+$font-size-lg: 16px !default;
+$font-size-sm: 13px !default;
+
+$font-sizes: () !default;
+$font-sizes: map-merge(("base": $font-size-base,
+    "xl": $font-size-xl,
+    "lg": $font-size-lg,
+    "sm": $font-size-sm,
+  ),
+  $font-sizes);
+
+$font-family-base: ('NotoSans', 'malgun gothic', sans-serif);
+
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 600 !default;
+
+$font-weight-base: $font-weight-regular !default;
+
+$line-height-base: 1.5 !default; ///////////
+
+$font-color-base: $secondary !default;
+
+$text-link-hover-color: $blue !default;
+$text-link-active-color: darken($text-link-hover-color, 10%) !default;
+
+$border-color-base: $gray-300 !default;
+
+// margin, padding
+$com-margin: 30px !default;
+$com-margin-xs: 10px !default;
+$com-margin-sm: 20px !default;
+$com-margin-lg: 40px !default;
+$com-top-margin: 14px !default;
+
+// Buttons + Forms
+$input-btn-padding-y: 5px !default;
+$input-btn-padding-x: 10px !default;
+$input-btn-padding-y-sm: 2px !default;
+$input-btn-padding-x-sm: 8px !default;
+$input-btn-padding-y-lg: 2px !default;
+$input-btn-padding-x-lg: 10px !default;
+$input-btn-padding-y-xlg: 4px !default;
+$input-btn-padding-x-xlg: 12px !default;
+
+$input-btn-font-family: null !default;
+$input-btn-font-size: $font-size-base !default;
+$input-btn-focus-color: darken($bluedark, 6%) !default;
+
+$input-btn-height: 34px !default;
+$input-btn-height-sm: 30px !default;
+$input-btn-height-lg: 40px !default;
+$input-btn-height-xlg: 50px !default;
+
+$input-btn-font-size-sm: $font-size-sm !default;
+$input-btn-font-size-lg: $font-size-base !default;
+$input-btn-font-size-xlg: $font-size-lg !default;
+
+$input-btn-border-width: 1px !default;
+
+$input-btn-line-height: $input-btn-height - (($input-btn-padding-y * 2) + ($input-btn-border-width * 2)) !default;
+$input-btn-line-height-sm: $input-btn-height-sm - (($input-btn-padding-y-sm * 2) + ($input-btn-border-width * 2)) !default;
+$input-btn-line-height-lg: $input-btn-height-lg - (($input-btn-padding-y-lg * 2) + ($input-btn-border-width * 2)) !default;
+$input-btn-line-height-xlg: $input-btn-height-xlg - (($input-btn-padding-y-xlg * 2) + ($input-btn-border-width * 2)) !default;
+
+$input-btn-disabled-bg: $gray-300 !default;
+$input-btn-disabled-color: $gray-500 !default;
+$input-btn-disabled-border-color: $gray-300 !default;
+
+// Buttons
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-y-sm: $input-btn-padding-y-sm !default;
+$btn-padding-x-sm: $input-btn-padding-x-sm !default;
+$btn-padding-y-lg: $input-btn-padding-y-lg !default;
+$btn-padding-x-lg: $input-btn-padding-x-lg !default;
+$btn-padding-y-xlg: $input-btn-padding-y-lg !default;
+$btn-padding-x-xlg: $input-btn-padding-x-lg !default;
+
+$btn-font-family: $input-btn-font-family !default;
+
+$btn-font-size: $input-btn-font-size !default;
+$btn-font-size-sm: $input-btn-font-size-sm !default;
+$btn-font-size-lg: $font-size-lg !default;
+$btn-font-size-xlg: $input-btn-font-size-lg !default;
+
+$btn-line-height-sm: $input-btn-line-height-sm !default;
+$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-line-height-xlg: $input-btn-line-height-lg !default;
+
+$btn-border-width: $input-btn-border-width !default;
+
+$btn-height: $input-btn-height !default;
+$btn-height-sm: $input-btn-height-sm !default;
+$btn-height-xlg: $input-btn-height-xlg !default;
+
+$btn-min-height: $input-btn-height !default;
+$btn-min-height-lg: 40px !default;
+
+$btn-disabled-border-color: $input-btn-disabled-border-color !default;
+$btn-disabled-bg : $input-btn-disabled-bg !default;
+$btn-disabled-color : $white !default;
+
+$btn-tertiary-border-color: $border-color-base !default;
+$btn-tertiary-color: $font-color-base !default;
+$btn-quaternary-color: $font-color-base !default;
+
+// Forms
+$input-width: 200px !default;
+$input-width-xs: 100px !default;
+$input-width-sm: 130px !default;
+$input-width-lg: 300px !default;
+$input-width-xl: 400px !default;
+
+$input-border-color: $border-color-base !default;
+$input-border-width: $input-btn-border-width !default;
+
+$input-padding-y: $input-btn-padding-y !default;
+$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y-sm: $input-btn-padding-y-sm !default;
+$input-padding-x-sm: $input-btn-padding-x-sm !default;
+$input-padding-y-lg: $input-btn-padding-y-lg !default;
+$input-padding-x-lg: $input-btn-padding-x-lg !default;
+
+$input-font-size: $input-btn-font-size !default;
+$input-font-size-sm: $input-btn-font-size-sm !default;
+$input-font-size-lg: $input-btn-font-size-lg !default;
+
+$input-color: $gray-600 !default;
+
+$input-disabled-border-color: $gray-300 !default;
+$input-disabled-bg: $gray-200 !default;
+$input-disabled-color: $gray-500 !default;
+
+$input-readonly-border-color: $gray-300 !default;
+$input-readonly-bg: $gray-200 !default;
+
+$input-focus-bg: $skyblue !default;
+$input-focus-border-color: $skyblue !default;
+
+$input-hover-border-color: $gray-400 !default;
+$input-hover-color: $input-color !default;
+
+$input-error-border-color: $red !default;
+
+$input-placeholder-color: $gray-500 !default;
+
+$input-height: $input-btn-height !default;
+$input-height-sm: $input-btn-height-sm !default;
+$input-height-lg: $input-btn-height-lg !default;
+$input-height-xl: $input-btn-height-xlg !default;
+
+$input-line-height: $input-btn-line-height !default;
+$input-line-height-sm: $input-btn-line-height-sm !default;
+$input-line-height-lg: $input-btn-line-height-lg !default;
+
+$input-group-margin-y : 6px !default;
+$input-group-margin-x : 10px !default; //단독 사용시 임시적용
+
+// Badge
+$badge-font-size: $font-size-base !default;
+$badge-padding-y: 4px !default;
+$badge-padding-x: 8px !default;
+$badge-border-radius: 10rem !default;
+
+// Pagination
+$pagination-width: 34px !default;
+$pagination-height: $pagination-width !default;
+$pagination-line-height: $pagination-height !default;
+$pagination-color: $dark !default;
+$pagination-hover-color: $pagination-color !default;
+$pagination-hover-bg: $gray-100 !default;
+$pagination-active-color: $primary !default;
+$pagination-active-bg: $gray-100 !default;
+
+// Spinner
+$spinner-dot-bg: $primary;
+
+// Tabs
+$tab-height: 40px !default;
+$tab-padding-x: 20px !default;
+$tab-border-width: 1px !default;
+$tab-border-color: $gray-300 !default;
+$tab-bg: $white !default;
+$tab-color: $gray-500 !default;
+$tab-font-size: $font-size-base !default;
+$tab-line-height: ($tab-height - ($tab-border-width * 2)) !default;
+$tab-active-height: ($tab-height + $tab-border-width) !default;
+$tab-active-border-color: $dark !default;
+$tab-active-color: $dark !default;
+$tab-hover-border-color: $gray-500 !default;
+$tab-cont-margin-y: 20px !default;
+$tab-cont-border-color: $dark !default;
+
+// Table
+$tbl-border-color: $gray-200 !default;
+$tbl-header-bg: $tbl-border-color;
+$tbl-th-bg: #f7f7f7 !default;
+$tbl-thead-th-height: 50px !default;
+$tbl-thead-th-color: $dark !default;
+$tbl-tbody-td-height: $tbl-thead-th-height !default;
+$tbl-tbody-td-color: $gray-600 !default;
+$tbl-tbody-bg: lighten($light, 2%) !default; // tbody 짝수 색상
+
+$tbl-thead-th-height-sm: 40px !default;
+$tbl-thead-td-height-sm: $tbl-thead-th-height-sm !default;
+
+$tbl-td-padding-x: 15px !default;
+$tbl-td-padding-y: 15px !default;
+$tbl-td-padding-x-lg: 15px !default;
+$tbl-td-padding-y-lg: 15px !default;
+$tbl-td-padding-x-sm: 10px !default;
+$tbl-td-padding-y-sm: 10px !default;
+$tbl-td-padding-x-xs: 5px !default;
+$tbl-td-padding-y-xs: 5px !default;
+$tbl-th-padding-x: 15px !default;
+$tbl-th-padding-y: 15px !default;
+$tbl-th-padding-y-sm: 10px !default;
+$tbl-th-padding-y-md: 12px !default;
+$tbl-thead-th-padding-x: $tbl-td-padding-x !default;
+$tbl-thead-th-padding-y: $tbl-td-padding-y !default;
+
+$tbl-line-height: 1.8 !default;
+
+$tbl-no-data-color: $input-disabled-color !default;
+
+// Datepicker
+$ui-bg: $white !default;
+$ui-datepicker-width: 300px;
+$ui-datepicker-height: 300px;
+$ui-datepicker-border-color: $gray-200;
+$ui-datepicker-th-color: $dark;
+$ui-datepicker-color: $gray-500;
+$ui-datepicker-hover-bg: $skyblue-light;
+$ui-datepicker-today-bg: $red;
+
+// Layout
+$main-width: 1200px;
+$main-padding-x: 30px;
+$main-padding-y: 30px;
+$main-margin-x: $main-padding-x;
+$main-margin-y: $main-padding-y;
+
+// header
+$header-logo-width: 180px;
+
+$gnb-height: 60px;
+$gnb-border-width: 4px;
+$gnb-color: $dark;
+$gnb-font-size: 16px;
+$gnb-line-height: ($gnb-height - $gnb-border-width);
+$gnb-active-border-color: $primary;
+$gnb-active-color: $primary;
+$gnb-hover-color: $gnb-active-color;
+
+$container-width: $main-width;
+
+$content-tit-color: $dark;
+$content-padding: 20px;
+$content-border-size: 1px;
+$content-border-color: $gray-200;
+
+// sidebar
+$sidebar-width: $header-logo-width;
+$sidebar-bg: $gray-100;
+
+// Popup
+$popup-border-color: $gray-200;
+$popup-padding-x: 40px;
+$popup-padding-y: 36px;
+$popup-tit-color: $gray-700;
+$popup-tit-size: $font-size-lg;
+$popup-cont-border-color: $gray-200;
+
+$popup-mini-tit-size: $font-size-lg;
+$popup-mini-padding-y: 10px;
+$popup-mini-padding-x: 14px;
+$popup-mini-color: $gray-600;
+$popup-mini-font-size: $font-size-base;
+
+// Icon Font
+$icon-font-family: 'ckdhmall' !default;
+$icon-arrow-down: '\e900' !default;
+$icon-arrow-left: '\e901' !default;
+$icon-arrow-right: '\e902' !default;
+$icon-double-arrow-left: '\e903' !default;
+$icon-double-arrow-right: '\e904' !default;
+$icon-plus: '\e905' !default;
+$icon-minus: '\e90e' !default;
+$icon-check: '\e906' !default;
+$icon-circle: '\e907' !default;
+$icon-download: '\e908' !default;
+$icon-excel: '\e909' !default;
+$icon-x: '\e90a' !default;
+$icon-x-bold: '\e90b' !default;
+$icon-search: '\e90c' !default;
+$icon-settings: '\e90d' !default;
+$icon-doc: '\e90f' !default;
+
+// login
+$login-footer-height: 30px;
+$login-footer-line-height: $login-footer-height;
+$login-footer-bg: $gray-300;
+$login-footer-color: $dark;
+$login-wrap-padding-bottom: $login-footer-height;
+
+// main
+$main-side-color: $dark;
+$main-tit-font-size: $font-size-xl;
+$main-tbl-color: $gray-500;
+
+// grid
+$grid-row-margin-x: 15px;
+$grid-col-padding-x: $grid-row-margin-x;
+
+// text
+$txt-desc-color: $gray-500;
+
+// list
+$list-color: $gray-600;
+$list-font-size: $font-size-lg;
+$list-bul-color: $red;
+
+// box
+$box-border-color: $gray-200;
+$box-title-padding-x: 12px;
+$box-title-padding-y: 10px;
+
+//depth
+$depth-padding-x: 12px;
+$depth-01-on-bg: $skyblue-light;
+$depth-01-on-color: $blue;
+
+$depth-02-on-bg: $gray-100;

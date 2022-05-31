@@ -1,0 +1,224 @@
+@mixin hover {
+  &:not(:disabled):not(.disabled):hover {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+//Button theme
+@mixin button-variant($border, $background, $hover-border: darken($border, 5%), $hover-background: darken($background, 5%), $active-border: darken($border, 10%), $active-background: darken($background, 10%)) {
+  border-color: $border;
+  background-color: $background;
+  color: $white;
+
+  @include hover {
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  @include active {
+    background-color: $active-background !important;
+    border-color: $active-border !important;
+  }
+}
+
+@mixin button-outline-variant($color, $border, $hover-border: darken($border, 3%), $active-border: darken($border, 8%)) {
+  color: $color;
+  border-color: $border;
+  background-color: $white;
+
+  @include hover {
+    border-color: $hover-border;
+    background-color: darken($white, 3%);
+  }
+
+  @include active {
+    border-color: $active-border !important;
+    background-color: darken($white, 8%) !important;
+  }
+}
+
+// Button sizes
+@mixin button-size($min-height, $padding-y, $padding-x, $font-size) {
+  min-height: $min-height;
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+}
+
+@mixin button-info($border, $color, $hover-border, $hover-background) {
+  border-color: $border;
+  color: $color;
+
+  @include hover {
+    border-color: $hover-border;
+    background-color: $hover-background;
+    text-decoration: none;
+  }
+}
+
+@mixin button-link($color, $hover-color) {
+  background-color: transparent;
+  color: $color;
+
+  @include hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}
+
+@mixin button-icon($color) {
+  color: $color;
+}
+
+//Button, forms line height
+@mixin form-line-height ($height, $padding-y, $border-width) {
+  line-height: $height - (($padding-y * 2) + ($border-width * 2));
+}
+
+//icon
+@mixin icon-size-position($width, $height, $bg-position-x, $bg-position-y) {
+  width: $width;
+  height: $height;
+  background-position: $bg-position-x $bg-position-y;
+}
+
+//color
+@mixin text-emphasis($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+}
+
+@mixin font-sizes($parent, $font-size) {
+  #{$parent} {
+    font-size: $font-size !important;
+  }
+}
+
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+
+  // a#{$parent},
+  // button#{$parent} {
+  //  @include hover-focus {
+  //    background-color: darken($color, 10%) !important;
+  //  }
+  // }
+}
+
+//position
+@mixin position-absolute ($left, $top) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+
+//shadow
+@mixin box-shadow ($hosizontal, $vertical, $blur, $opacity) {
+  -webkit-box-shadow: $hosizontal $vertical $blur 0px rgba(0, 0, 0, $opacity);
+  -moz-box-shadow: $hosizontal $vertical $blur 0px rgba(0, 0, 0, $opacity);
+  box-shadow: $hosizontal $vertical $blur 0px rgba(0, 0, 0, $opacity);
+}
+
+
+//row
+@mixin make-col($size, $columns) {
+  max-width: percentage($size / $columns);
+}
+
+//text ellipsis
+@mixin text-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin tblEllipsis($line: 1) {
+  @if ($line==1) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    max-height: $font-size-base * $tbl-line-height * $line;
+  }
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin corner-lt {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin corner-rt {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin corner-lb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin corner-rb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

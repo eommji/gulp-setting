@@ -1,0 +1,64 @@
+@function size($start, $end) {
+    $size: ();
+
+    @for $i from $start through $end {
+        $value: $i + 0;
+        $size: append($size, $value);
+    }
+
+    @return $size;
+}
+
+@function getPx($value) {
+    @if $value==0 {
+        @return $value !important;
+    }
+
+    @else {
+        @return $value+0px !important;
+    }
+}
+
+@function getPs($value) {
+    @if $value==0 {
+        @return $value !important;
+    }
+
+    @else {
+        @return $value+0% !important;
+    }
+}
+
+$size : size(0, 100);
+$position : ('l-':'left', 'r-':'right', 't-':'top', 'b-':'bottom');
+$nameMap : ('m':'margin', 'p':'padding');
+$nameMap2 : ('w': 'width', 'h': 'height');
+
+@mixin generate($nameMap : (), $position : (), $size : ()) {
+    @each $preKey,
+    $preValue in $nameMap {
+        @each $px in $size {
+            .#{$preKey}#{$px} {
+                #{$preValue}: getPx($px);
+            }
+
+            @each $sufKey,
+            $sufValue in $position {
+                .#{$preKey}#{$sufKey}#{$px} {
+                    #{$preValue}-#{$sufValue}: getPx($px);
+                }
+            }
+        }
+    }
+
+        
+    @each  $preKey, $preValue in $nameMap2 {
+        @each $ps in $size {
+            .#{$preKey}#{$ps} {
+                #{$preValue}: getPs($ps);
+            }
+        }
+    }
+}
+
+@include generate($nameMap, $position, $size);

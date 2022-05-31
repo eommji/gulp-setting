@@ -1,0 +1,38 @@
+.pagination {
+  margin-top: 10px;
+
+  &>ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+
+      a {
+        display: block;
+        width: $pagination-width;
+        height: $pagination-height;
+        color: $pagination-color;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+        line-height: $pagination-line-height;
+        text-align: center;
+
+        &:hover {
+          color: $pagination-hover-color;
+          text-decoration: none;
+          background-color: $pagination-hover-bg;
+        }
+
+        &.active {
+          color: $pagination-active-color;
+          background-color: $pagination-active-bg;
+        }
+
+        .icon {
+          color: $pagination-active-color;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

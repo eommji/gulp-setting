@@ -1,0 +1,108 @@
+.popup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $tbl-border-color;
+
+  .tbl_row {
+    tbody {
+
+      th {
+        padding-top: $tbl-th-padding-y-sm;
+        padding-bottom: $tbl-th-padding-y-sm;
+      }
+
+      td {
+        padding-top: $tbl-td-padding-y-sm;
+        padding-bottom: $tbl-td-padding-y-sm;
+      }
+    }
+  }
+}
+
+
+
+.popup-dialog {
+  width: 800px;
+}
+
+.popup-dialog-xs {
+  width: 400px;
+
+  .popup-body {
+    text-align: center;
+  }
+
+  .popup-footer {
+    background-color: inherit;
+  }
+}
+
+.popup-dialog-sm {
+  width: 600px;
+}
+
+.popup-dialog-lg {
+  width: 1000px;
+}
+
+.popup-dialog-xl {
+  width: 1200px;
+}
+
+
+
+.popup-header {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.popup-title {
+  font-size: $popup-tit-size;
+  font-weight: $font-weight-bold;
+}
+
+.popup-body {
+  flex: 1 1 auto;
+  padding: 20px;
+  max-height: 650px;
+  background-color: #fff;
+  overflow-y: auto;
+
+  & > .cont_top {
+    margin-top: 0;
+  }
+}
+
+.popup-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+
+  &.col {
+    flex-direction: column;
+
+    .col-item + .col-item {
+      margin-top: 10px;
+    }
+  }
+
+  .btn_line_tertiary.disabled, 
+  .btn_line_tertiary [disabled], 
+  .btn_line_tertiary:disabled {
+    background-color: $white;
+  }
+}

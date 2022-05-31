@@ -1,0 +1,55 @@
+.sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  padding: 10px 0;
+  font-size: $font-size-lg
+}
+
+.sidebar-depth1 {
+
+  >li {
+
+    &.active>a {
+      color: $primary;
+    }
+
+    >a {
+      display: block;
+      padding: 10px 20px;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.sidebar-depth2 {
+  margin-top: -5px;
+
+  >li {
+
+    &.active a {
+      background-color: $skyblue-light;
+      color: $primary;
+    }
+
+    &:hover a {
+      text-decoration: underline;
+    }
+
+    >a {
+      position: relative;
+      display: block;
+      margin: 0 20px;
+      padding: 5px 10px 5px 20px;
+      border-radius: 5px;
+      font-size: $font-size-base;
+
+      &::before {
+        content: '-';
+        margin-right: 5px;
+        position: absolute;
+        left: 10px;
+        top: 3px;
+      }
+    }
+  }
+}
