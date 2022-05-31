@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팝업</title>
+  <link rel="stylesheet" href="@@root/css/style.css">
+</head>
+
+<body>
+
+  @@include('include/modal.html', {title: "팝업"})
+
+  <div id="modal" class="modal show">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">제목</div>
+          <button type="button" class="modal-close" data-dismiss="modal">닫기</button>
+        </div>
+        <div class="modal-body">
+          내용입니다.
+          @@include('include/pagination.html')
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="@@root/js/lib.js"></script>
+  <script src="@@root/js/script.js"></script>
+</body>
+
+</html>
