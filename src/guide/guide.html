@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT UI Guide</title>
+  <link rel="stylesheet" href="assets/prism.css">
+  <link rel="stylesheet" href="assets/guide.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="guide-body">
+  <aside class="guide-aside">
+    <h1 class="guide-title">PROJECT<br>UI Guide</h1>
+    <a href="../index.html" class="btn-guide" target="_blank">Index</a>
+    <nav class="guide-nav">
+      <a href="#nav01">Typography</a>
+      <a href="#nav02">Color</a>
+      <a href="#nav03">Buttons</a>
+      <a href="#nav04">Lists</a>
+      <a href="#nav05">Forms</a>
+      <a href="#nav06">Tables</a>
+      <a href="#nav07">Tabs</a>
+      <a href="#nav08">Pagination</a>
+      <a href="#nav09">Popup</a>
+      <a href="#nav10">Icons</a>
+      <a href="#nav11">Spinner</a>
+    </nav>
+    <button type="button" class="btn-guide-aside">메뉴</button>
+  </aside>
+
+  <main class="guide-main">
+    <!-- Typography -->
+    <section id="nav01" class="guide-section">
+      <h2 class="guide-section__title">Typography</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Title</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <h1 class="title">제목입니다.(font-size: 20px)</h1>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Text</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          기본 텍스트입니다.(font-size: 14px)
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Link</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <a href="#" class="text-link">link</a>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Sizes</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <span class="text-base">base(14px)</span>
+          <span class="text-lg">Large(16px)</span>
+          <span class="text-xl">X-Large(20px)</span>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Typography -->
+
+    <!-- Color -->
+    <section id="nav02" class="guide-section">
+      <h2 class="guide-section__title">Color</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Text</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <span class="text-primary">primary(#0241BF)</span>
+          <span class="text-secondary">secondary(#666666)</span>
+          <span class="text-tertiary">tertiary(#dddddd)</span>
+          <span class="text-red">red(#FF8282)</span>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Background</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="bg-primary">primary(#0241BF)</div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Color -->
+
+    <!-- Buttons -->
+    <section id="nav03" class="guide-section">
+      <h2 class="guide-section__title">Buttons</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Default buttons</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <button type="button" class="btn btn-primary">primary</button>
+          <button type="button" class="btn btn-secondary">secondary</button>
+          <button type="button" class="btn btn-quaternary">quaternary</button>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Outline buttons</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <button type="button" class="btn btn-line-tertiary">tertiary</button>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Icon buttons</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <button type="button" class="btn btn-line-green">
+            <i class="icon icon-excel"></i> 엑셀 다운로드 <i class="icon icon-arrow-down"></i>
+          </button>
+          
+          <div class="form-file">
+            <input type="file" id="f0">
+            <label class="btn btn-line-green" for="f0">
+              <i class="icon icon-excel"></i> 엑셀 업로드 <i class="icon icon-arrow-up"></i>
+            </label>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Sizes</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <button type="button" class="btn btn-primary btn-sm">Small</button>
+          <button type="button" class="btn btn-primary btn-lg">large</button>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Disabled state</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <button type="button" class="btn btn-primary" disabled>disabled</button>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Buttons -->
+
+    <!-- List -->
+    <section id="nav04" class="guide-section">
+      <h2 class="guide-section__title">List</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Bulleted lists</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="list mt-20">
+            <p class="list-title"><strong>반드시 알아두세요!</strong></p>
+            <p class="list-item">전송 버튼 선택 시 즉시 전송됩니다.</p>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //List -->
+
+    <!-- Forms -->
+    <section id="nav05" class="guide-section">
+      <h2 class="guide-section__title">Forms</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Input</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <input type="text" class="form-control">
+          <input type="text" class="form-control error" value="error">
+          <input type="text" class="form-control" disabled value="disabled">
+          <input type="text" class="form-control" readonly value="readonly">
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Select</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <select class="form-control">
+            <option value="">option</option>
+          </select>
+
+          <select class="form-control" disabled>
+            <option value="">option</option>
+          </select>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Checks</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="form-check mr-0">
+            <input type="checkbox" name="c1" id="c1-0">
+            <label for="c1-0">
+              <i class="form-check__icon"></i>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="c1" id="c1-1">
+            <label for="c1-1">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">check</span>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="c1" id="c1-2" checked>
+            <label for="c1-2">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">check</span>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="c1" id="c1-3" disabled>
+            <label for="c1-3">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">check</span>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="c1" id="c1-4" checked disabled>
+            <label for="c1-4">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">check</span>
+            </label>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">radios</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <form>
+            <div class="form-check mr-0">
+              <input type="radio" name="r1" id="r1-0">
+              <label for="r1-0">
+                <i class="form-check__icon"></i>
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="r1" id="r1-1">
+              <label for="r1-1">
+                <i class="form-check__icon"></i>
+                <span class="form-check__text">radio</span>
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="r1" id="r1-2" checked>
+              <label for="r1-2">
+                <i class="form-check__icon"></i>
+                <span class="form-check__text">radio</span>
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="r1" id="r1-3">
+              <label for="r1-3">
+                <i class="form-check__icon"></i>
+                <span class="form-check__text">image radio</span>
+                <span class="form-check__img"><img src="../images/img_promotion_type_01.png" alt="" /></span>
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="r2" id="r2-4" disabled>
+              <label for="r2-4">
+                <i class="form-check__icon"></i>
+                <span class="form-check__text">radio</span>
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="r2" id="r2-5" checked disabled>
+              <label for="r2-5">
+                <i class="form-check__icon"></i>
+                <span class="form-check__text">radio</span>
+              </label>
+            </div>
+
+
+          </form>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Textarea</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <textarea class="form-control" rows="3"></textarea>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">File</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="form-file">
+            <input type="file" id="f1">
+            <label class="btn btn-quaternary" for="f1">파일등록</label>
+            <span class="form-file__text">
+              파일명_0909.xlsx
+              <button type="button" class="btn-circle">
+                삭제<i class="icon icon-x"></i>
+              </button>
+            </span>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">File(Image)</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="form-file">
+            <input type="file" id="f2">
+            <label class="btn btn-quaternary" for="f2">이미지 등록</label>
+            <span class="form-file__text">
+              파일명_0909.xlsx
+              <button type="button" class="btn-circle">삭제<i class="icon icon-x"></i></button>
+            </span>
+            <span class="form-file__image">
+              <img src="../images/temp.jpg" alt="">
+            </span>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Image Upload</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="img-upload-wrap">
+            <div class="img-upload">
+              <img src="../images/temp.jpg" alt="">
+              <button type="button" class="btn-circle">삭제<i class="icon icon-x"></i></button>
+            </div>
+            <div class="form-file">
+              <input type="file" id="f3">
+              <label class="btn-img-add" for="f3">이미지 추가</label>
+            </div>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Input Group</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <input type="text" class="form-control datepicker">
+          <span class="ml-5 mr-5">~</span>
+          <input type="text" class="form-control datepicker">
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-1">
+            <label for="rp-1" class="btn btn-quaternary btn-sm">오늘</label>
+          </div>
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-2">
+            <label for="rp-2" class="btn btn-quaternary btn-sm">3일간</label>
+          </div>
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-3">
+            <label for="rp-3" class="btn btn-quaternary btn-sm">1주일</label>
+          </div>
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-4">
+            <label for="rp-4" class="btn btn-quaternary btn-sm">1개월</label>
+          </div>
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-5">
+            <label for="rp-5" class="btn btn-quaternary btn-sm">3개월</label>
+          </div>
+          <div class="form-check form-period">
+            <input type="radio" name="rp" id="rp-6" checked>
+            <label for="rp-6" class="btn btn-quaternary btn-sm">전체</label>
+          </div>
+        </script>
+
+        <script type="text/html" class="language-markup">
+          <input type="text" class="form-control datepicker">
+          <select class="form-control form-xs">
+            <option value="">00시</option>
+          </select>
+          <select class="form-control form-xs">
+            <option value="">00분</option>
+          </select>
+          <span class="ml-5 mr-5">~</span>
+          <input type="text" class="form-control datepicker">
+          <select class="form-control form-xs">
+            <option value="">00시</option>
+          </select>
+          <select class="form-control form-xs">
+            <option value="">00분</option>
+          </select>
+        </script>
+
+        <script type="text/html" class="language-markup">
+          <ul class="input-list">
+            <li>
+              <label for="address1" class="text-input">관리자 1 :</label>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+            </li>
+            <li>
+              <label for="address2" class="text-input">관리자 2 :</label>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+            </li>
+            <li>
+              <label for="address3" class="text-input">관리자 3 :</label>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+              <span class="ml-5 mr-5">-</span>
+              <input type="text" class="form-control form-xs">
+            </li>
+          </ul>
+        </script>
+
+        <script type="text/html" class="language-markup">
+          <div class="form-check form-col">
+            <input type="radio" name="r2" id="r2-1">
+            <label for="r2-1">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">radio</span>
+            </label>
+          </div>
+          <div class="form-check form-col">
+            <input type="radio" name="r2" id="r2-2">
+            <label for="r2-2">
+              <i class="form-check__icon"></i>
+              <span class="form-check__text">radio</span>
+            </label>
+          </div>
+        </script>
+
+        <script type="text/html" class="language-markup">
+          <div class="flex">
+            <select class="form-control">
+              <option value="">전체</option>
+            </select>
+            <input type="text" class="form-control flex-item ml-8">
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+
+    </section>
+    <!-- //Forms -->
+
+    <!-- Tables -->
+    <section id="nav06" class="guide-section">
+      <h2 class="guide-section__title">Tables</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title">Column</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <table class="tbl">
+            <colgroup>
+              <col width="150px">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>제목</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>99</td>
+                <td class="text-left">
+                  <a href="#" class="text-link display-block" target="_blank">
+                    락토핏 골드 3통 + 프로메가 오메가3
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" class="no-data">데이터가 없습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Row</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <table class="tbl tbl-row">
+            <colgroup>
+              <col width="180px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>거래처코드</th>
+                <td>CA0255</td>
+              </tr>
+            </tbody>
+          </table>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Table in Table</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <table class="tbl tbl-row">
+            <colgroup>
+              <col width="150px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>할인율</th>
+                <td>
+                  <table class="tbl tbl-center">
+                    <thead>
+                      <tr>
+                        <th>1회</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </script>
+
+        <script type="text/html" class="language-markup">
+          <table class="tbl tbl-row">
+            <colgroup>
+              <col width="150px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>할인율</th>
+                <td>
+                  <button type="button" class="btn btn-quaternary">검색</button>
+                  <table class="tbl tbl-initial mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-center">1회</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article">
+        <h3 class="guide-article__title">Scroll Table</h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="tbl-scroll-y">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tbl-scroll-y sm">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+                <tr>
+                  <td>제목입니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Tables -->
+
+    <!-- Tabs -->
+    <section id="nav07" class="guide-section">
+      <h2 class="guide-section__title">Tabs</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title"></h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="tabs">
+            <ul class="tab-list">
+              <li><a href="#tab01">SMS 내역</a></li>
+              <li><a href="#tab02">SMS, 알림톡 자동발송 설정</a></li>
+              <li><a href="#tab03">SMS, 알림톡 자동발송 내역</a></li>
+            </ul>
+            <div id="tab01" class="tab-content">
+              tab1
+            </div>
+            <div id="tab02" class="tab-content">
+              tab2
+            </div>
+            <div id="tab03" class="tab-content">
+              tab3
+            </div>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Tabs -->
+
+    <!-- Pagination -->
+    <section id="nav08" class="guide-section">
+      <h2 class="guide-section__title">Pagination</h2>
+      <article class="guide-article">
+        <h3 class="guide-article__title"></h3>
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          @@include('../include/pagination.html')
+
+          <div class="pagination">
+            <ul class="page">
+              <li><a href="#!"><i class="icon icon-double-angle-left"></i></a></li>
+              <li><a href="#!"><i class="icon icon-angle-left"></i></a></li>
+              <li><a href="#!" class="active">1</a></li>
+              <li><a href="#!">2</a></li>
+              <li><a href="#!">3</a></li>
+              <li><a href="#!">4</a></li>
+              <li><a href="#!">5</a></li>
+              <li><a href="#!"><i class="icon icon-angle-right"></i></a></li>
+              <li><a href="#!"><i class="icon icon-double-angle-right"></i></a></li>
+            </ul>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Pagination -->
+
+    <!-- Popup -->
+
+    <!-- //Popup -->
+
+    <!-- Icons -->
+    <section id="nav10" class="guide-section guide-icons">
+      <h2 class="guide-section__title">Icons</h2>
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-angle-down"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-angle-left"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-angle-right"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-double-angle-left"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-double-angle-right"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-plus"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-minus"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-check"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-circle"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-excel"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-x"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-x-bold"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-search"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-settings"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-doc"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-hamburger"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-arrow-up"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+
+      <article class="guide-article guide-article--row">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <i class="icon icon-arrow-down"></i>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Icons -->
+
+    <!-- Spinner -->
+    <section id="nav11" class="guide-section">
+      <h2 class="guide-section__title">Spinner</h2>
+      <article class="guide-article">
+        <!-- markup -->
+        <script type="text/html" class="language-markup">
+          <div class="spinner">
+            <span class="spinner-dot"></span>
+            <span class="spinner-dot"></span>
+            <span class="spinner-dot"></span>
+            <span class="spinner-dot"></span>
+            <span class="spinner-dot"></span>
+            <span class="spinner-dot"></span>
+          </div>
+        </script>
+        <!-- //markup -->
+      </article>
+    </section>
+    <!-- //Spinner -->
+  </main>
+
+  <script src="assets/prism.js"></script>
+  <script src="assets/guide.js"></script>
+  <script src="../js/lib.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -6,36 +6,135 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>index</title>
-
-  <style>
-    * {
-      font-family: 'malgun gothic', '맑은 고딕', sans-serif;
-    }
-
-    .site {
-      display: flex;
-    }
-
-    .site>li {
-      flex: 0 1 auto;
-      margin: 0 20px;
-    }
-
-    li {
-      padding: 5px;
-    }
-  </style>
-
+  <link rel="stylesheet" href="guide/assets/reset.css">
+  <link rel="stylesheet" href="guide/assets/guide.css">
 </head>
 
-<body>
+<body class="guide-body">
+  <aside class="guide-aside">
+    <h1 class="guide-title">PROJECT<br>Index</h1>
+    <a href="guide/guide.html" class="btn-guide" target="_blank">UI Guide</a>
+    <nav class="guide-nav">
+      <a href="#nav01">main</a>
+      <a href="#nav02">sub</a>
+    </nav>
+    <button type="button" class="btn-guide-aside">메뉴</button>
+  </aside>
 
-  <ul class="site">
-    <li>
-      <a href="html/main.html">main</a>
-    </li>
-  </ul>
+  <main class="guide-main">
+    <section id="nav01" class="guide-section">
+      <h2 class="guide-section__title">main</h2>
+      <table class="guide-table">
+        <colgroup>
+          <col width="15%">
+          <col width="15%">
+          <col width="15%">
+          <col width="15%">
+          <col width="8%">
+          <col width="8%">
+          <col width="13%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1Depth</th>
+            <th>2Depth</th>
+            <th>3Depth</th>
+            <th>4Depth</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Link</th>
+            <th>etc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>main</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-center">엄지민</td>
+            <td class="text-center">완료</td>
+            <td><a href="html/main.html" target="_blank" class="guide-link">main.html</a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
+    <section id="nav02" class="guide-section">
+      <h2 class="guide-section__title">sub</h2>
+      <table class="guide-table">
+        <colgroup>
+          <col width="15%">
+          <col width="15%">
+          <col width="15%">
+          <col width="15%">
+          <col width="8%">
+          <col width="8%">
+          <col width="13%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1Depth</th>
+            <th>2Depth</th>
+            <th>3Depth</th>
+            <th>4Depth</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Link</th>
+            <th>etc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>sub 1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-center">엄지민</td>
+            <td class="text-center">검수요청</td>
+            <td><a href="html/sub.html" target="_blank" class="guide-link"></a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sub 1-1</td>
+            <td></td>
+            <td></td>
+            <td class="text-center">엄지민</td>
+            <td class="text-center">검수요청</td>
+            <td><a href="html/sub.html" target="_blank" class="guide-link"></a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>sub 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-center">엄지민</td>
+            <td class="text-center">검수요청</td>
+            <td><a href="html/sub.html" target="_blank" class="guide-link"></a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sub 2-1</td>
+            <td></td>
+            <td></td>
+            <td class="text-center">엄지민</td>
+            <td class="text-center">검수요청</td>
+            <td><a href="html/sub.html" target="_blank" class="guide-link"></a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="guide/assets/guide.js"></script>
+  <script src="js/lib.js"></script>
 </body>
 
 </html>

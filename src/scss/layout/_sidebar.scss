@@ -1,16 +1,17 @@
 .sidebar {
   width: $sidebar-width;
   background-color: $sidebar-bg;
-  padding: 10px 0;
   font-size: $font-size-lg
 }
 
-.sidebar-depth1 {
+.sidebar-depth-01 {
 
   >li {
 
     &.active>a {
+      background-color: $skyblue-light;
       color: $primary;
+      font-weight: $font-weight-bold;
     }
 
     >a {
@@ -21,35 +22,25 @@
   }
 }
 
-.sidebar-depth2 {
-  margin-top: -5px;
+.sidebar-depth-02,
+.sidebar-depth-03 {
 
   >li {
 
-    &.active a {
-      background-color: $skyblue-light;
-      color: $primary;
-    }
-
-    &:hover a {
-      text-decoration: underline;
+    &.active>a {
+      font-weight: $font-weight-bold;
     }
 
     >a {
       position: relative;
       display: block;
-      margin: 0 20px;
-      padding: 5px 10px 5px 20px;
-      border-radius: 5px;
+      padding: 5px 25px 5px 35px;
       font-size: $font-size-base;
-
-      &::before {
-        content: '-';
-        margin-right: 5px;
-        position: absolute;
-        left: 10px;
-        top: 3px;
-      }
     }
   }
+}
+
+.sidebar-depth-03 li a {
+  padding-left: 40px;
+  font-size: $font-size-sm;
 }

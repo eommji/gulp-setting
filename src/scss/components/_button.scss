@@ -25,10 +25,6 @@
     text-decoration: none;
   }
 
-  &:focus {
-    border: 1px dashed $black;
-  }
-
   &+.btn {
     margin-left: 5px;
   }
@@ -74,22 +70,24 @@ $value in $btn-colors {
   width: 100%;
 }
 
-.btn-delete {
+.btn-circle {
+  display: inline-block;
   background-color: $quaternary;
   color: $white;
   @include circle(20px);
-  line-height: 20px;
   font-size: 0;
   transition: background-color 0.1s ease-in;
 
-  &::before {
-    font-family: $icon-font-family;
-    content: $icon-x-bold;
+  .icon::before {
     font-size: 10px;
   }
 
   &:hover {
     background-color: darken($quaternary, 10%);
+  }
+
+  &:active {
+    background-color: darken($quaternary, 15%);
   }
 }
 
@@ -101,19 +99,10 @@ $value in $btn-colors {
     margin-right: 10px;
   }
 
-  &::after {
-    content: '펼치기';
-    margin-left: 5px;
-  }
-
   &.active {
 
     &::before {
       content: $icon-minus;
-    }
-
-    &::after {
-      content: '접기';
     }
   }
 }
@@ -123,4 +112,10 @@ $value in $btn-colors {
   min-height: $font-size-base;
   padding: 0;
   border: 0;
+}
+
+a.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }

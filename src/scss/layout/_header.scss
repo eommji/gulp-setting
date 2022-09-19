@@ -12,19 +12,18 @@
 .header-body {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $gray-200;
   height: 60px;
 }
 
 .header-logo {
-  display: block;
   width: $header-logo-width;
   text-align: center;
 }
 
 .header-nav {
-  flex: 1 0 auto;
   height: 100%;
 
   &>ul {
@@ -63,31 +62,8 @@
           left: 0;
           right: 0;
           bottom: 0;
-       }
+        }
       }
     }
-  }
-}
-
-.header-util {
-  display: flex;
-  height: 100%;
-  margin-right: 20px;
-
-  & > a {
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-
-    &:hover {
-      text-decoration: none;
-      color: $dark;
-      font-weight: $font-weight-medium;
-    }
-  }
-
-  .icon {
-    margin-right: 5px;
-    font-size: 16px;
   }
 }

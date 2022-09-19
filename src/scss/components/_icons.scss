@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'ckdhmall';
+  font-family: 'icon-font';
   src:
-  url('../fonts/ckdhmall.ttf?jqkir6') format('truetype'),
-  url('../fonts/ckdhmall.woff?jqkir6') format('woff'),
-  url('../fonts/ckdhmall.svg?jqkir6#ckdhmall') format('svg');
+    url('../fonts/icon-font.ttf?25c1zk') format('truetype'),
+    url('../fonts/icon-font.woff?25c1zk') format('woff'),
+    url('../fonts/icon-font.svg?25c1zk#icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'ckdhmall' !important;
+  font-family: 'icon-font' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,32 +25,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down:before {
+.icon-angle-down:before {
   content: "\e900";
 }
 
-.icon-arrow-left:before {
+.icon-angle-left:before {
   content: "\e901";
 }
 
-.icon-arrow-right:before {
+.icon-angle-right:before {
   content: "\e902";
 }
 
-.icon-double-arrow-left:before {
+.icon-double-angle-left:before {
   content: "\e903";
 }
 
-.icon-double-arrow-right:before {
+.icon-double-angle-right:before {
   content: "\e904";
 }
 
 .icon-plus:before {
   content: "\e905";
-}
-
-.icon-minus:before {
-  content: "\e90e";
 }
 
 .icon-check:before {
@@ -61,7 +57,7 @@
   content: "\e907";
 }
 
-.icon-download:before {
+.icon-arrow-down:before {
   content: "\e908";
 }
 
@@ -85,6 +81,18 @@
   content: "\e90d";
 }
 
-.icon-doc:before {
+.icon-minus:before {
+  content: "\e90e";
+}
+
+.icon-hamburger:before {
   content: "\e90f";
+}
+
+.icon-doc:before {
+  content: "\e910";
+}
+
+.icon-arrow-up:before {
+  content: "\e911";
 }

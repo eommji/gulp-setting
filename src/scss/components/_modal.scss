@@ -42,8 +42,22 @@
   &.modal-dialog-xl {
     width: 1000px;
   }
+
   &.modal-dialog-full {
     width: 96vw;
+  }
+
+  &.modal-dialog-lg .modal-footer .btn-lg {
+    min-width: 150px;
+  }
+
+  &.modal-dialog-xl,
+  &.modal-dialog-full {
+
+    .modal-footer .btn-lg {
+      min-width: 180px;
+      min-height: 45px;
+    }
   }
 }
 
@@ -119,10 +133,13 @@
   justify-content: center;
   padding: 25px;
   border-top: 1px solid $border-color-base;
+
+  .btn-lg+.btn-lg {
+    margin-left: 10px;
+  }
 }
 
 .modal {
-
   .tbl {
 
     th,
@@ -135,5 +152,10 @@
       margin: -#{$tbl-td-padding-y-sm} -#{$tbl-td-padding-x-sm};
       width: calc(100% + (#{$tbl-td-padding-x-sm} + #{$tbl-td-padding-x-sm}));
     }
+  }
+
+  .tbl-thead-th {
+    padding: 10px;
+    height: 42px;
   }
 }

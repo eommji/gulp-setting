@@ -1,0 +1,42 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  border-bottom: 1px dashed $dark;
+
+  .tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: $dark;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    right: -110px;
+    top: 0;
+    z-index: 1;
+    color: $white;
+    font-size: $font-size-sm;
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+  }
+}
+
+.tooltip-text-01 {
+
+  >dl {
+    display: flex;
+    flex-wrap: wrap;
+
+    dt {
+      width: 45%;
+      text-align: left;
+    }
+
+    dd {
+      width: 55%;
+      text-align: right;
+    }
+  }
+}

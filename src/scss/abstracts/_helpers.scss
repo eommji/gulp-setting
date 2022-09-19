@@ -11,18 +11,19 @@ $value in $font-sizes {
 
 .text-link {
   text-decoration: underline;
+  color: $primary;
 
   &:hover {
-    color: $text-link-hover-color;
-  }
-
-  &:active {
-    color: $text-link-active-color;
+    color: darken($primary, 15%);
   }
 }
 
-.flex-container {
+.flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .flex-item {
@@ -45,6 +46,14 @@ $value in $font-sizes {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .btn+.btn {
+    margin-left: 10px;
+  }
+}
+
+.align-center {
+  align-items: center;
 }
 
 .gap-5 {
@@ -59,15 +68,19 @@ $value in $font-sizes {
   }
 }
 
-.col + .col {
+.col+.col {
   margin-top: 10px;
 }
 
-.row + .row {
+.col-sm+.col-sm {
+  margin-top: 5px;
+}
+
+.row+.row {
   margin-left: $com-margin;
 }
 
-.row-xs + .row-xs {
+.row-xs+.row-xs {
   margin-left: $com-margin-xs;
 }
 
@@ -94,9 +107,11 @@ $value in $font-sizes {
 .display-block {
   display: block !important;
 }
+
 .display-inblock {
   display: inline-block !important;
 }
+
 .display-none {
   display: none !important;
 }
@@ -124,4 +139,8 @@ $value in $font-sizes {
 
 .bt-0 {
   border-top: 0 !important;
+}
+
+.bg-highlight {
+  background-color: lighten($skyblue-light, 5%);;
 }

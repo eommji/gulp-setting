@@ -1,50 +1,83 @@
 .tabs {
-    .tab-list {
-        border-bottom: $tab-border-width solid $tab-active-color;
 
-        li {
-            float: left;
-            position: relative;
-            z-index: 1;
+  .tab-list {
+    border-bottom: $tab-border-width solid $tab-active-color;
 
-            a {
-                display: block;
-                min-width: 150px;
-                height: $tab-height;
-                padding: 0 $tab-padding-x;
-                border: $tab-border-width solid $tab-border-color;
-                border-bottom: 0;
-                background-color: $tab-bg;
-                color: $tab-color;
-                font-size: $tab-font-size;
-                line-height: $tab-line-height;
-                text-align: center;
-            }
-            
-            &+ li {
-                margin-left: -#{$tab-border-width};
-            }
+    li {
+      float: left;
+      position: relative;
+      z-index: 1;
 
-            &.ui-tabs-active {
-                z-index: 2;
+      a {
+        display: block;
+        min-width: 150px;
+        height: $tab-height;
+        padding: 0 $tab-padding-x;
+        border: $tab-border-width solid $tab-border-color;
+        border-bottom: 0;
+        background-color: $tab-bg;
+        color: $tab-color;
+        font-size: $tab-font-size;
+        line-height: $tab-line-height;
+        text-align: center;
+      }
 
-                a {
-                    height: $tab-active-height;
-                    margin-bottom: -#{$tab-border-width};
-                    border-color: $tab-active-color;
-                    color: $tab-active-color;
-                }
-            }
+      &+li {
+        margin-left: -#{$tab-border-width};
+      }
+
+      &.ui-tabs-active {
+        z-index: 2;
+
+        a {
+          height: $tab-active-height;
+          margin-bottom: -#{$tab-border-width};
+          border-color: $tab-active-color;
+          font-weight: $font-weight-medium;
+          color: $tab-active-color;
         }
-        
-        &::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+      }
     }
 
-    .tab-content {
-        margin: $tab-cont-margin-y 0;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
     }
+  }
+
+  .tab-list02 {
+    display: flex;
+
+    >li {
+      position: relative;
+
+      &:not(:first-child)::before {
+        display: block;
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: $tab-color;
+        @include centerer(false, true);
+      }
+
+      >a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        text-align: center;
+        color: $tab-color;
+        font-size: $tab-font-size;
+      }
+
+      &.ui-tabs-active a {
+        color: $tab-active-color;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+
+  .tab-content {
+    margin: $tab-cont-margin-y 0;
+  }
 }

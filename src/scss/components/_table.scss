@@ -6,11 +6,13 @@
   font-size: $font-size-base;
 
   thead {
+
     th {
       height: $tbl-thead-th-height;
       padding: $tbl-thead-th-padding-y $tbl-thead-th-padding-x;
       border-bottom: 1px solid $tbl-border-color;
       background-color: $tbl-th-bg;
+      text-align: center;
       color: $tbl-thead-th-color;
       font-weight: $font-weight-regular;
     }
@@ -26,6 +28,7 @@
   }
 
   tbody {
+
     th {
       padding: $tbl-th-padding-y $tbl-th-padding-x;
       border-bottom: 1px solid $tbl-border-color;
@@ -66,7 +69,8 @@
     }
   }
 
-  +.tbl {
+  +.tbl,
+  +.tbl-title {
     margin-top: 40px;
   }
 
@@ -75,7 +79,7 @@
   }
 }
 
-.tbl .tbl {
+.tbl .tbl:not(.tbl-initial) {
   margin: -#{$tbl-td-padding-y} -#{$tbl-td-padding-x};
   width: calc(100% + (#{$tbl-td-padding-x} + #{$tbl-td-padding-x}));
   border-top: 0;
@@ -86,13 +90,14 @@
 }
 
 .tbl-row {
-  tbody {
 
-    th {
+  &>tbody>tr {
+
+    &>th {
       background-color: $tbl-th-bg;
     }
 
-    td {
+    &>td {
       padding: $tbl-td-padding-x-lg;
       text-align: left;
     }
@@ -100,6 +105,7 @@
 }
 
 .tbl-sm {
+
   thead th,
   tbody td {
     height: $tbl-thead-th-height-sm;
@@ -109,10 +115,11 @@
 
 
 .tbl-xs {
+
   thead th,
   tbody td {
-    padding-left: $tbl-td-padding-x-xs;
-    padding-right: $tbl-td-padding-x-xs;
+    padding-left: $tbl-td-padding-x-xs !important;
+    padding-right: $tbl-td-padding-x-xs !important;
   }
 }
 
@@ -136,6 +143,10 @@
     max-height: 200px;
   }
 
+  &.lg {
+    max-height: 600px;
+  }
+
   .tbl {
     width: 100%;
     margin: 0;
@@ -143,9 +154,11 @@
 }
 
 .tbl-center {
-  th,
-  td {
-    text-align: center !important;
+
+  thead tr th,
+  tbody tr th,
+  tbody tr td {
+    text-align: center;
   }
 }
 
@@ -171,6 +184,13 @@
   }
 }
 
+.tbl-initial:not(.tbl-row) {
+
+  thead th {
+    text-align: center;
+  }
+}
+
 .tbl-thead-th {
   border-top: 1px solid $tbl-border-color;
   height: $tbl-thead-th-height;
@@ -180,7 +200,39 @@
   color: $tbl-thead-th-color;
   font-weight: $font-weight-regular;
 
-  + .tbl-scroll-y {
+  +.tbl-scroll-y {
     margin-top: 0;
+  }
+}
+
+.tbl-title {
+  position: relative;
+  margin-top: $com-margin-sm;
+  background-color: $gray-300;
+  padding: 10px $tbl-thead-th-padding-x;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  text-align: left;
+  color: $dark;
+
+  &+.tbl {
+    margin-top: 0;
+  }
+
+  .btn-tbl-delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    color: $dark;
+    font-size: 0;
+
+    &::before {
+      display: block;
+      content: $icon-x;
+      font-family: $icon-font-family;
+      font-size: 16px;
+    }
   }
 }
