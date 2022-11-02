@@ -8,8 +8,6 @@ const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const bs = require('browser-sync').create();
 
-sass.compiler = require("node-sass");
-
 const routes = {
   base: {
     src: "src/*.html",
