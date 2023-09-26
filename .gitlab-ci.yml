@@ -1,0 +1,9 @@
+deploy-to-production-server:
+    only:
+    - main
+    script:
+    - sudo chown -R gitlab-runner.gitlab-runner /bellweb/23_esbop/
+    - rsync -av --delete --exclude='.git/' --exclude='.gitlab-ci.yml' . /bellweb/23_esbop/
+    - sudo chown -R bellweb.bellweb /bellweb/23_esbop/
+    tags:
+    - 23_esbop
